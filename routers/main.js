@@ -1,9 +1,7 @@
-'use strict';
-
 const router = require('express').Router();
 
-const { main } = require('../controllers');
+const { main: { showMain } } = require('../controllers');
 
-router.get('/', main.showMain);
+router.get('/', showMain);
 
 module.exports = router;

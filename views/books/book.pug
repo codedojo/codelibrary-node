@@ -1,0 +1,45 @@
+extends ../_layout
+
+block main
+    main#main
+        div.mdc-layout-grid
+            div.mdc-layout-grid__inner
+                div.mdc-layout-grid__cell.mdc-layout-grid__cell--span-6
+                    div.mdc-card.book-card
+                        div.mdc-card__horizontal-block
+                            header.mdc-card__primary
+                                h1.mdc-card__title.mdc-card__title--large= book.title
+
+                                ul.mdc-list
+                                    li.mdc-list-item
+                                        i.mdc-list-item__start-detail.material-icons person
+                                        span.mdc-list-item__text= book.authors.join(', ')
+
+                                    li.mdc-list-item
+                                        i.mdc-list-item__start-detail.material-icons business
+                                        span.mdc-list-item__text= book.publisher
+
+                                    li.mdc-list-item
+                                        i.mdc-list-item__start-detail.material-icons edit
+                                        span.mdc-list-item__text #{book.edition}-е издание
+
+                                    li.mdc-list-item
+                                        i.mdc-list-item__start-detail.material-icons date_range
+                                        span.mdc-list-item__text= book.date
+
+                                    li.mdc-list-item
+                                        i.mdc-list-item__start-detail.material-icons book
+                                        span.mdc-list-item__text #{book.pages} стр.
+
+                            section.mdc-card__media
+                                img.mdc-card__media-item.mdc-card__media-item--3x(src=book.imageUrl)
+
+                        section.mdc-card__supporting-text
+                            h2.mdc-typography--title Описание
+                            != book.description
+
+                        section.mdc-card__supporting-text
+                            h2.mdc-typography--title Содержание
+
+                            != book.contents
+                        

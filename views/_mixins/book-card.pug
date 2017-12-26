@@ -1,0 +1,18 @@
+mixin book-card(book)
+    div.mdc-card.book-card
+        div.mdc-card__horizontal-block
+            section.mdc-card__primary
+                h1.mdc-card__title.mdc-card__title--large= book.title
+                span.mdc-card__subtitle= book.authors.join(', ')
+
+            section.mdc-card__media
+                img.mdc-card__media-item.mdc-card__media-item--2x(src=book.imageUrl)
+
+        section.mdc-card__actions
+            button.mdc-button.mdc-button--compact.mdc-card__action
+                i.mdc-button__icon.material-icons bookmark
+            button.mdc-button.mdc-button--compact.mdc-card__action
+                i.mdc-button__icon.material-icons thumb_up
+                span= book.likes
+
+            a.mdc-button.mdc-button--compact.mdc-card__action(href=`/books/${book.slug}`) Подробнее

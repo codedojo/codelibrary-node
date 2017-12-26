@@ -3,8 +3,11 @@
 const path = require('path');
 
 module.exports = {
-    port: 3000,
+    version: '1.0.0',
+    port: process.env.PORT || 3000,
     paths: {
-        public: path.resolve(__dirname, '..', 'public')
+        views: path.resolve(__dirname, '..', 'views'),
+        public: path.resolve(__dirname, '..', 'public'),
+        lib: path.resolve(__dirname, '..', 'node_modules')
     }
 };

@@ -1,0 +1,13 @@
+extends _layout
+
+block header
+
+block content
+    main#main
+        i.error-icon.material-icons error
+        if error
+            h1= error.message
+            pre= error.stack
+        else
+            h1= message
+            p Упс, произошла ошибка. Если это уже не первый раз, напишите пожалуйста в службу поддержки по адресу #[a(href="mailto:support@codedojo.ru") support@codedojo.ru]

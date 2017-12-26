@@ -1,0 +1,15 @@
+.book-card {
+    background-color: white;
+
+    .mdc-card__action {
+        min-width: 36px;
+
+        .mdc-button__icon:only-child {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-left: auto;
+        }
+    }
+}

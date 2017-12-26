@@ -1,0 +1,17 @@
+.auth-page {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    .auth-form {
+        width: 100%;
+        max-width: 400px;
+
+        .mdc-text-field {
+            display: 100%;
+            max-width: 200px;
+            display: block;
+        }
+    }
+}

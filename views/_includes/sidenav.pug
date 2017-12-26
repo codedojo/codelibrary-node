@@ -1,0 +1,23 @@
+aside#sidenav.mdc-permanent-drawer
+    div.mdc-list-group
+        nav.mdc-list
+            a.mdc-list-item(href='/books' class={ 'mdc-permanent-drawer--selected': id === 'main' })
+                i.mdc-list-item__start-detail.material-icons(aria-hidden='true') home
+                span.mdc-list-item__text Главная
+            a.mdc-list-item(href='/books/new' class={ 'mdc-permanent-drawer--selected': id === 'new-books' })
+                i.mdc-list-item__start-detail.material-icons(aria-hidden='true') new_releases
+                span.mdc-list-item__text Новинки
+            a.mdc-list-item(href='/books/best' class={ 'mdc-permanent-drawer--selected': id === 'best-books' })
+                i.mdc-list-item__start-detail.material-icons(aria-hidden='true') star
+                span.mdc-list-item__text Лучшие
+        
+        hr.mdc-list-divider
+
+        h3.mdc-list-group__subheader По темам
+        nav.mdc-list.mdc-list--avatar-list
+            for topic in topics
+                - let isActive = currentTopic && topic.id === currentTopic.id;
+
+                a.mdc-list-item(href=`/topics/${topic.id}` class={ 'mdc-list-item--activated': isActive, 'mdc-permanent-drawer--selected': isActive })
+                    img.mdc-list-item__start-detail(src=`/img/topics/${topic.id}.svg` aria-hidden='true')
+                    span.mdc-list-item__text= topic.title

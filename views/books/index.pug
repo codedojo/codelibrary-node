@@ -1,0 +1,14 @@
+extends ../_layout
+
+include ../_mixins/book-card
+
+block main
+    main#main
+        div.mdc-layout-grid
+            if books.length
+                div.mdc-layout-grid__inner
+                    for book in books
+                        div.mdc-layout-grid__cell
+                            +book-card(book)
+            else
+                p Книги не найдены

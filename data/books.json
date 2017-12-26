@@ -1,0 +1,300 @@
+[
+    {
+        "updatedAt": "2017-07-19T12:57:44.299Z",
+        "createdAt": "2016-10-09T11:27:43.266Z",
+        "title": "You Don't Know JS: Scope & Closures",
+        "slug": "ydkjs-scope-and-closures",
+        "level": "int",
+        "url": "http://shop.oreilly.com/product/0636920026327.do",
+        "imageUrl": "https://akamaicovers.oreilly.com/images/0636920026327/cat.gif",
+        "codeUrl": "",
+        "githubUrl": "",
+        "date": "Март 2014 г.",
+        "publisher": "oreilly",
+        "contents": "<ol>\n<li>What Is Scope?</li>\n<li>Lexical Scope</li>\n<li>Function Versus Block Scope</li>\n<li>Hoisting</li>\n<li>Scope Closure</li>\n</ol>\n",
+        "description": "<p>No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. This concise yet in-depth guide takes you inside scope and closures, two core concepts you need to know to become a more efficient and effective JavaScript programmer. You’ll learn how and why they work, and how an understanding of closures can be a powerful part of your development skillset.</p>\n<p>Like other books in the &quot;You Don’t Know JS&quot; series, <em>Scope and Closures</em> dives into trickier parts of the language that many JavaScript programmers simply avoid. Armed with this knowledge, you can achieve true JavaScript mastery.</p>\n<ul>\n<li>Learn about scope, a set of rules to help JavaScript engines locate variables in your code</li>\n<li>Go deeper into nested scope, a series of containers for variables and functions</li>\n<li>Explore function- and block-based scope, <em>hoisting</em>, and the patterns and benefits of scope-based hiding</li>\n<li>Discover how to use closures for synchronous and asynchronous tasks, including the creation of JavaScript libraries</li>\n</ul>\n",
+        "likes": 1,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "basics"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 98,
+        "edition": 1,
+        "authors": [
+            "Kyle Simpson"
+        ],
+        "topic": "javascript",
+        "id": "57fa29afd328353b203c4a9b"
+    },
+    {
+        "updatedAt": "2016-11-18T22:58:42.951Z",
+        "createdAt": "2016-10-09T11:38:26.928Z",
+        "title": "You Don't Know JS: this & Object Prototypes",
+        "slug": "ydkjs-this-and-object-prototypes",
+        "level": "int",
+        "url": "http://shop.oreilly.com/product/0636920033738.do",
+        "imageUrl": "https://akamaicovers.oreilly.com/images/0636920033738/cat.gif",
+        "codeUrl": "",
+        "githubUrl": "",
+        "date": "Июль 2014 г.",
+        "contents": "<ol>\n<li>this or That?</li>\n<li>this All Makes Sense Now!</li>\n<li>Objects</li>\n<li>Mixing (Up) &quot;Class&quot; Objects</li>\n<li>Prototypes</li>\n<li>Behavior Delegation</li>\n</ol>\n",
+        "description": "<p>No matter how much experience you have with JavaScript, odds are you don't fully understand the language. This concise, in-depth guide takes you inside JavaScript's this structure and object prototypes. You'll learn how they work and why they're integral to behavior delegation — a design pattern in which objects are linked, rather than cloned.</p>\n<p>Like other books in the &quot;You Don’t Know JS&quot; series, <em>this and Object Prototypes</em> dives into trickier parts of the language that many JavaScript programmers simply avoid. Armed with this knowledge, you can become a true JavaScript master.</p>\n<p>With this book you will:</p>\n<ul>\n<li>Explore how the this binding points to objects based on how the function is called</li>\n<li>Look into the nature of JS objects and why you'd need to point to them</li>\n<li>Learn how developers use the mixin pattern to fake classes in JS</li>\n<li>Examine how JS's prototype mechanism forms links between objects</li>\n<li>Learn how to move from class/inheritance design to behavior delegation</li>\n<li>Understand how the OLOO (objects-linked-to-other-objects) coding style naturally implements behavior delegation</li>\n</ul>\n",
+        "likes": 1,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "basics"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 174,
+        "edition": 1,
+        "authors": [
+            "Kyle Simpson"
+        ],
+        "topic": "javascript",
+        "id": "57fa2c32d328353b203c4a9d"
+    },
+    {
+        "updatedAt": "2016-11-18T22:58:44.200Z",
+        "createdAt": "2016-10-09T11:45:05.089Z",
+        "title": "You Don't Know JS: Types & Grammar",
+        "slug": "ydkjs-types-and-grammar",
+        "level": "int",
+        "url": "http://shop.oreilly.com/product/0636920033745.do",
+        "imageUrl": "https://akamaicovers.oreilly.com/images/0636920033745/cat.gif",
+        "codeUrl": "",
+        "githubUrl": "",
+        "date": "Январь 2015 г.",
+        "contents": "<ol>\n<li>Types</li>\n<li>Values</li>\n<li>Natives</li>\n<li>Coercion</li>\n<li>Grammar</li>\n</ol>\n",
+        "description": "<p>No matter how much experience you have with JavaScript, odds are you don't fully understand the language. As part of the &quot;You Don't Know JS&quot; series, this compact guide explores JavaScript types in greater depth than previous treatments by looking at type coercion problems, demonstrating why types work, and showing you how to take advantage of these features.</p>\n<p>Like other books in this series, <em>You Don't Know JS: Types &amp; Grammar</em> dives into trickier parts of the language that many JavaScript programmers simply avoid or assume don't exist (like types). Armed with this knowledge, you can achieve true JavaScript mastery.</p>\n<p>With this book you will:</p>\n<ul>\n<li>Get acquainted with JavaScript's seven types: null, undefined, boolean, number, string, object, and symbol</li>\n<li>Understand why JavaSript's unique array, string, and number characteristics may delight or confound you</li>\n<li>Learn how natives provide object wrappers around primitive values</li>\n<li>Dive into the coercion controversy — and learn why this feature is useful in many cases</li>\n<li>Explore various nuances in JavaScript syntax, involving statements, expressions, and other features</li>\n</ul>\n",
+        "likes": 1,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "basics"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 198,
+        "edition": 1,
+        "authors": [
+            "Kyle Simpson"
+        ],
+        "topic": "javascript",
+        "id": "57fa2dc1a317321be8276ed7"
+    },
+    {
+        "updatedAt": "2016-10-09T11:50:09.694Z",
+        "createdAt": "2016-10-09T11:50:09.694Z",
+        "title": "You Don't Know JS: ES6 & Beyond",
+        "slug": "ydkjs-es6-and-beyond",
+        "level": "int",
+        "url": "http://shop.oreilly.com/product/0636920033769.do",
+        "imageUrl": "https://akamaicovers.oreilly.com/images/0636920033769/cat.gif",
+        "codeUrl": "",
+        "githubUrl": "",
+        "date": "Декабрь 2015 г.",
+        "contents": "<ol>\n<li>ES? Now &amp; Future</li>\n<li>Syntax</li>\n<li>Organization</li>\n<li>Async Flow Control</li>\n<li>Collections</li>\n<li>API Additions</li>\n<li>Meta Programming</li>\n<li>Beyond ES6</li>\n</ol>\n",
+        "description": "<p>No matter how much experience you have with JavaScript, odds are you don't fully understand the language. As part of the &quot;You Don't Know JS&quot; series, this compact guide focuses on new features available in ECMAScript 6 (ES6/ES2015), the latest version of the standard upon which JavaScript is built.</p>\n<p>Like other books in this series, <em>You Don't Know JS: ES6 &amp; Beyond</em> dives into trickier parts of the language that many JavaScript programmers either avoid or know nothing about. Armed with this knowledge, you can achieve true JavaScript mastery.</p>\n<p>With this book, you will:</p>\n<ul>\n<li>Learn new ES6 syntax that eases the pain points of common programming idioms</li>\n<li>Organize code with iterators, generators, modules, and classes</li>\n<li>Express async flow control with Promises combined with generators</li>\n<li>Use collections to work more efficiently with data in structured ways</li>\n<li>Leverage new API helpers, including Array, Object, Math, Number, and String</li>\n<li>Extend your program's capabilities through meta programming</li>\n<li>Preview features likely coming to JS beyond ES6</li>\n</ul>\n",
+        "likes": 0,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "es2015"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 278,
+        "edition": 1,
+        "authors": [
+            "Kyle Simpson"
+        ],
+        "topic": "javascript",
+        "id": "57fa2ef1a317321be8276ed8"
+    },
+    {
+        "updatedAt": "2016-10-09T11:55:00.870Z",
+        "createdAt": "2016-10-09T11:55:00.870Z",
+        "title": "You Don't Know JS: Async & Performance",
+        "slug": "ydkjs-async-and-performance",
+        "level": "adv",
+        "url": "http://shop.oreilly.com/product/0636920033752.do",
+        "imageUrl": "https://akamaicovers.oreilly.com/images/0636920033752/cat.gif",
+        "codeUrl": "",
+        "githubUrl": "",
+        "date": "Февраль 2015 г.",
+        "contents": "<ol>\n<li>Asynchrony: Now &amp; Later</li>\n<li>Callbacks</li>\n<li>Promises</li>\n<li>Generators</li>\n<li>Program Performance</li>\n<li>Benchmarking &amp; Tuning</li>\n</ol>\n",
+        "description": "<p>No matter how much experience you have with JavaScript, odds are you don't fully understand the language. As part of the &quot;You Don't Know JS&quot; series, this concise yet in-depth guide focuses on new asynchronous features and performance techniques — including Promises, generators, and Web Workers — that let you create sophisticated single-page web applications and escape callback hell in the process.</p>\n<p>Like other books in this series, <em>You Don't Know JS: Async &amp; Performance</em> dives into trickier parts of the language that many JavaScript programmers simply avoid. Armed with this knowledge, you can become a true JavaScript master.</p>\n<p>With this book you will:</p>\n<ul>\n<li>Explore old and new JavaScript methods for handling asynchronous programming</li>\n<li>Understand how callbacks let third parties control your program's execution</li>\n<li>Address the &quot;inversion of control&quot; issue with JavaScript Promises</li>\n<li>Use generators to express async flow in a sequential, synchronous-looking fashion</li>\n<li>Tackle program-level performance with Web Workers, SIMD, and asm.js</li>\n<li>Learn valuable resources and techniques for benchmarking and tuning your expressions and statements</li>\n</ul>\n",
+        "likes": 0,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "async",
+            "performance"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 296,
+        "edition": 1,
+        "authors": [
+            "Kyle Simpson"
+        ],
+        "topic": "javascript",
+        "id": "57fa3014a317321be8276ed9"
+    },
+    {
+        "updatedAt": "2016-11-18T22:58:33.513Z",
+        "createdAt": "2016-10-09T12:00:59.362Z",
+        "title": "You Don't Know JS: Up & Going",
+        "slug": "ydkjs-up-and-going",
+        "level": "beg",
+        "url": "http://shop.oreilly.com/product/0636920039303.do",
+        "imageUrl": "https://akamaicovers.oreilly.com/images/0636920039303/cat.gif",
+        "codeUrl": "",
+        "githubUrl": "",
+        "date": "Март 2015 г.",
+        "contents": "",
+        "description": "<p>It's easy to learn parts of JavaScript, but much harder to learn it completely — or even sufficiently — whether you're new to the language or have used it for years. With the &quot;You Don't Know JS&quot; book series, you'll get a more complete understanding of JavaScript, including trickier parts of the language that many experienced JavaScript programmers simply avoid.</p>\n<p>The series' first book, <em>Up &amp; Going</em>, provides the necessary background for those of you with limited programming experience. By learning the basic building blocks of programming, as well as JavaScript's core mechanisms, you'll be prepared to dive into the other, more in-depth books in the series—and be well on your way toward true JavaScript.</p>\n<p>With this book you will:</p>\n<ul>\n<li>Learn the essential programming building blocks, including operators, types, variables, conditionals, loops, and functions</li>\n<li>Become familiar with JavaScript's core mechanisms such as values, function closures, this, and prototypes</li>\n<li>Get an overview of other books in the series—and learn why it’s important to understand all parts of JavaScript</li>\n</ul>\n",
+        "likes": 1,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "basics"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 88,
+        "edition": 1,
+        "authors": [
+            "Kyle Simpson"
+        ],
+        "topic": "javascript",
+        "id": "57fa317ba317321be8276eda"
+    },
+    {
+        "updatedAt": "2016-10-09T12:15:27.416Z",
+        "createdAt": "2016-10-09T12:15:27.416Z",
+        "title": "Effective JavaScript",
+        "slug": "effective-javascript",
+        "level": "int",
+        "url": "http://effectivejs.com",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/project-2319410720952518384.appspot.com/o/books%2Feffective-javascript.jpg?alt=media&token=55ba3c88-081a-4651-bbb5-f8e34940d22e",
+        "codeUrl": "",
+        "githubUrl": "https://github.com/effectivejs/code",
+        "date": "Ноябрь 2012 г.",
+        "contents": "<ol>\n<li>Accustoming Yourself to JavaScript</li>\n<li>Variable Scope</li>\n<li>Working with Functions</li>\n<li>Objects and Prototypes</li>\n<li>Arrays and Dictionaries</li>\n<li>Library and API Design</li>\n<li>Concurrency</li>\n</ol>\n",
+        "description": "<p>In order to truly master JavaScript, you need to learn how to work effectively with the language’s flexible, expressive features and how to avoid its pitfalls. No matter how long you’ve been writing JavaScript code, Effective JavaScript will help deepen your understanding of this powerful language, so you can build more predictable, reliable, and maintainable programs.</p>\n<p>Author David Herman, with his years of experience on Ecma’s JavaScript standardization committee, illuminates the language’s inner workings as never before—helping you take full advantage of JavaScript’s expressiveness. Reflecting the latest versions of the JavaScript standard, the book offers well-proven techniques and best practices you’ll rely on for years to come.</p>\n<p>Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right programming style for each project, manage unanticipated problems, and work more successfully with every facet of JavaScript programming from data structures to concurrency. Key features include:</p>\n<ul>\n<li>Better ways to use prototype-based object-oriented programming</li>\n<li>Subtleties and solutions for working with arrays and dictionary objects</li>\n<li>Precise and practical explanations of JavaScript’s functions and variable scoping semantics</li>\n<li>Useful JavaScript programming patterns and idioms, such as options objects and method chaining</li>\n<li>In-depth guidance on using JavaScript’s unique &quot;run-to-completion&quot; approach to concurrency</li>\n</ul>\n",
+        "likes": 0,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "basics"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 240,
+        "edition": 1,
+        "authors": [
+            "David Herman"
+        ],
+        "topic": "javascript",
+        "id": "57fa34dfa317321be8276edb"
+    },
+    {
+        "updatedAt": "2016-10-09T12:44:49.489Z",
+        "createdAt": "2016-10-09T12:44:49.489Z",
+        "title": "Understanding ECMAScript 6",
+        "slug": "understanding-ecmascript-6",
+        "publisher": "oreilly",
+        "level": "int",
+        "url": "https://www.nostarch.com/ecmascript6",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/project-2319410720952518384.appspot.com/o/books%2Funderstanding-ecmascript-6.png?alt=media&token=2c2cd842-517b-4411-9cbf-006490c04301",
+        "codeUrl": "",
+        "githubUrl": "",
+        "original": null,
+        "date": "Август 2016 г.",
+        "contents": "<ol>\n<li>Block Bindings</li>\n<li>Strings and Regular Expressions</li>\n<li>Functions</li>\n<li>Expanded Object Functionality</li>\n<li>Destructuring for Easier Data Access</li>\n<li>Symbols and Symbol Properties</li>\n<li>Sets and Maps</li>\n<li>Iterators and Generators</li>\n<li>Introducing JavaScript Classes</li>\n<li>Improved Array Capabilities</li>\n<li>Promises and Asynchronous Programming</li>\n<li>Proxies and the Reflection API</li>\n<li>Encapsulating Code with Modules</li>\n</ol>\n",
+        "description": "<p>ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that ECMAScript 6 brings to JavaScript. Every chapter is packed with example code that works in any JavaScript environment so you'll be able to see new features in action.</p>\n<p>Whether you're a web developer or a Node.js developer, you'll find Understanding ECMAScript 6 indispensable on your journey from ECMAScript 5 to ECMAScript 6.</p>\n",
+        "likes": 0,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            "es6",
+            "es2015"
+        ],
+        "topics": [
+            "javascript"
+        ],
+        "language": "en",
+        "pages": 352,
+        "edition": 1,
+        "authors": [
+            "Nicholas C. Zakas"
+        ],
+        "topic": "javascript",
+        "id": "57fa3bc11b6bab3570624663"
+    },
+    {
+        "updatedAt": "2017-04-14T21:10:50.406Z",
+        "createdAt": "2016-10-09T12:57:17.701Z",
+        "title": "ng-book 2",
+        "slug": "ng-book-2",
+        "publisher": "",
+        "level": "beg",
+        "url": "https://www.ng-book.com/2",
+        "imageUrl": "https://d.gr-assets.com/books/1450449973l/28238685.jpg",
+        "codeUrl": "https://yadi.sk/d/Rj5VJMjBtVb3z",
+        "githubUrl": "",
+        "original": null,
+        "date": "Сентябрь 2016 г.",
+        "contents": "<ol>\n<li>Writing your First Angular 2 Web Application</li>\n<li>TypeScript</li>\n<li>How Angular Works</li>\n<li>Built-in Components</li>\n<li>Forms in Angular 2</li>\n<li>Data Architecture in Angular 2</li>\n<li>Data Architecture with Observables - Part 1: Services</li>\n<li>Data Architecture with Observables - Part 2: View Components</li>\n<li>HTTP</li>\n<li>Routing</li>\n<li>Advanced Components</li>\n<li>Converting an Angular 1 App to Angular 2</li>\n<li>Testing</li>\n<li>Dependency Injection</li>\n</ol>\n",
+        "description": "<p>What if you could master the entire framework – with solid foundations – in less time without beating your head against a wall? Imagine how quickly you could work if you knew the best practices and the best tools?</p>\n<p>Stop wasting your time searching and have everything you need to be productive in one, well-organized place, with complete examples to get your project up without needing to resort to endless hours of research.The in-depth, complete, and up-to-date book on Angular 2. Become an Angular 2 expert today.</p>\n",
+        "likes": 16,
+        "tags": [
+            ""
+        ],
+        "subtopics": [
+            ""
+        ],
+        "topics": [
+            "angular"
+        ],
+        "language": "en",
+        "pages": 513,
+        "edition": 1,
+        "authors": [
+            "Felipe Coury",
+            "Ari Lerner",
+            "Nate Murray",
+            "Carlos Taborda"
+        ],
+        "topic": "angular",
+        "id": "57fa3ead315b4a12f4a0258b"
+    }
+]
