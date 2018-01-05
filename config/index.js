@@ -8,6 +8,7 @@ module.exports = {
     paths: {
         views: path.resolve(__dirname, '..', 'views'),
         public: path.resolve(__dirname, '..', 'public'),
+        favicon: path.resolve(__dirname, '..', 'public', 'favicon.ico'),
         lib: path.resolve(__dirname, '..', 'node_modules')
     }
 };

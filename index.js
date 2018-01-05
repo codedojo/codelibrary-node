@@ -1,5 +1,6 @@
 const express = require('express');
 const logger = require('morgan');
+const favicon = require('serve-favicon');
 
 const config = require('./config');
 const { error } = require('./middleware');
@@ -15,7 +16,7 @@ app.locals.version = config.version;
 
 app.use(express.static(config.paths.public));
 app.use('/lib', express.static(config.paths.lib));
-
+app.use(favicon(config.paths.favicon));
 app.use(logger('dev'));
 
 app.use('/', routers.main);
