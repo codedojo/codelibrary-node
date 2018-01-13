@@ -1,0 +1,5 @@
+mixin mdc-button(text)
+    #{attributes.href ? 'a' : 'button'}.mdc-button(
+        href=attributes.href type=attributes.type
+        class={'mdc-button--raised': attributes.raised}
+    )= text

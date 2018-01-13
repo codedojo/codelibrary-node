@@ -1,0 +1,12 @@
+extends ../_layout
+
+block main
+    form(method='post')
+        input(type='hidden' name='secret_string' value='qwerty')
+        if !topic._id
+            +mdc-text-field('id', topic._id)(placeholder='ID' required)
+        +mdc-text-field('title', topic.title)(placeholder='Название' required)
+
+        +mdc-button(topic._id ? 'Сохранить' : 'Создать')(type='submit' raised)
+        if topic._id
+            +mdc-button('Удалить')(href=`/admin/topics/${topic._id}/delete`)

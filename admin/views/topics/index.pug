@@ -1,0 +1,11 @@
+extends ../_layout
+
+block main
+    ul.mdc-list.mdc-list--avatar-list
+        for topic in topics
+            li.mdc-list-item
+                img.mdc-list-item__graphic(src=topic.image)
+                = topic.title
+                a.mdc-list-item__meta.material-icons(href=`/admin/topics/${topic._id}/update`) edit
+        else
+            p Нет топиков

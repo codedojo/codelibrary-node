@@ -13,6 +13,8 @@ const {
 
 router.use(findTopics);
 
+router.param('book', findBook);
+
 router.get('/', showLatestBooks);
 router.get('/new', showNewBooks);
 router.get('/best', showBestBooks);

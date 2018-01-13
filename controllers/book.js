@@ -1,19 +1,23 @@
 const books = require('../data/books');
+const { book: Book, topic: Topic } = require('../models');
 
 module.exports = {
-    findBook(req, res, next) {
-        let bookSlug = req.params.book;
-        let book = books.find(book => book.slug === bookSlug);
+    findBook(req, res, next, slug) {
+        Book.findOne({ slug })
+            .populate('publisher')
+            .then(book => {
+                if (!book) {
+                    let error = new Error('Книга не найдена');
+                    error.status = 404;
+                    throw error;
+                }
 
-        if (!book) {
-            let error = new Error('Книга не найдена');
-            error.status = 404;
-            next(error);
-        } else {
-            req.book = book;
+                console.log(book);
+                req.book = book;
 
-            next();
-        }
+                next();
+            })
+            .catch(next);
     },
 
     // GET /books
@@ -45,18 +49,21 @@ module.exports = {
 
     // GET /topics/:topic
     showBooksByTopic(req, res) {
-        let booksByTopic = books.filter(book => book.topics.includes(req.topic.id));
-        
-        res.render('books', {
-            id: 'books',
-            title: `Книги по ${req.topic.title}`,
-            books: booksByTopic
-        });
+        Topic.findById(req.params.topic)
+            .populate('book')
+            .then(topic => {
+                console.log(topic.books);
+                res.render('books', {
+                    id: 'books',
+                    title: `Книги по ${req.topic.title}`,
+                    books: topic.books
+                });
+            });
     },
 
     // GET /books/:book
     showBook(req, res) {
-        res.render('book', {
+        res.render('books/book', {
             id: 'book',
             title: req.book.title,
             book: req.book
