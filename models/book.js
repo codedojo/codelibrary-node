@@ -20,7 +20,6 @@ const Book = new Schema({
     imageUrl: String,
     codeUrl: String,
     githubUrl: String,
-    original: { type: Schema.Types.ObjectId, ref: 'Book' },
     description: { type: String, default: '', trim: true },
     contents: { type: String, default: '', trim: true }
 },{
@@ -28,4 +27,5 @@ const Book = new Schema({
     toJSON: { versionKey: false, getters: true },
     timestamps: true
 });
+
 module.exports = mongoose.model('Book', Book);
