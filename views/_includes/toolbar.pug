@@ -5,5 +5,9 @@ header.mdc-toolbar
 
         section.mdc-toolbar__section.mdc-toolbar__serction--align-left.mdc-toolbar__section--shrink-to-fit
             nav.mdc-tab-bar
-                a.mdc-tab(href='/auth/login') Войти
-                a.mdc-tab(href='/auth/register') Зарегистрироваться
+                unless user
+                    a.mdc-tab(href='/auth/login') Войти
+                    a.mdc-tab(href='/auth/register') Зарегистрироваться
+                else
+                    a.mdc-tab(href='/profile')= user.email
+                    a.mdc-tab(href='/auth/logout') Выйти

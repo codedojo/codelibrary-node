@@ -1,23 +1,14 @@
 const router = require('express').Router();
 
-const { book: {
-    findBook,
-    showLatestBooks,
-    showNewBooks,
-    showBestBooks,
-    showBook
-} } = require('../controllers');
-const {
-    topic: { findTopics },
-} = require('../middleware');
+const { book: bookController, topic: topicController } = require('../controllers');
 
-router.use(findTopics);
+router.use(topicController.findTopics);
 
-router.param('book', findBook);
+router.param('book', bookController.findBook);
 
-router.get('/', showLatestBooks);
-router.get('/new', showNewBooks);
-router.get('/best', showBestBooks);
-router.get('/:book', findBook, showBook);
+router.get('/', bookController.showLatestBooks);
+router.get('/new', bookController.showNewBooks);
+router.get('/best', bookController.showBestBooks);
+router.get('/:book', bookController.showBook);
 
 module.exports = router;

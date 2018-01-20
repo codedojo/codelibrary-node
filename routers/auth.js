@@ -1,18 +1,18 @@
 const router = require('express').Router();
 
-const { auth: {
-    showRegisterPage,
-    showLoginPage,
-    register,
-    login
-} } = require('../controllers');
+const { auth: { authenticated, unauthenticated } } = require('../middleware');
+const { auth: controller } = require('../controllers');
 
 router.route('/register')
-    .get(showRegisterPage)
-    .post(register);
+    .all(unauthenticated)
+    .get(controller.showRegisterPage)
+    .post(controller.register);
 
 router.route('/login')
-    .get(showLoginPage)
-    .post(login);
+    .all(unauthenticated)
+    .get(controller.showLoginPage)
+    .post(controller.login);
+
+router.get('/logout', authenticated, controller.logout);
 
 module.exports = router;

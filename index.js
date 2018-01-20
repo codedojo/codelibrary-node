@@ -2,12 +2,11 @@ const express = require('express');
 const logger = require('morgan');
 const favicon = require('serve-favicon');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
-require('./services/db');
-
+const db = require('./services/db');
 const config = require('./config');
-const { error } = require('./middleware');
-const connection = require('./services/db');
+const { error, auth } = require('./middleware');
 const routers = require('./routers');
 const admin = require('./admin');
 
@@ -28,17 +27,33 @@ app.use(favicon(config.paths.favicon));
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
+    name: 'sessionId',
     secret: config.sessionSecret,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        // secure: true,
+        signed: true,
+        maxAge: 1000 * 60 * 60 * 24 * 3 // 3 days
+    },
+    store: new MongoStore({
+        mongooseConnection: db.connection,
+        ttl: 60 * 60 * 24 * 3, // 3 days
+        touchAfter: 60 * 60 * 24 // 1 day
+    })
 }));
+
+app.use(auth.findUser);
 
 app.use('/', routers.main);
 app.use('/auth', routers.auth);
+
+app.use(auth.authenticated);
+app.use('/profile', routers.profile);
 app.use('/books', routers.book);
 app.use('/topics', routers.topic);
 app.use('/search', routers.search);
-
 app.use('/admin', admin);
 
 app.use(error.notFound);

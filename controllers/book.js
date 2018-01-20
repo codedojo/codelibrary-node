@@ -1,4 +1,3 @@
-const books = require('../data/books');
 const { book: Book, topic: Topic } = require('../models');
 
 module.exports = {
@@ -12,7 +11,6 @@ module.exports = {
                     throw error;
                 }
 
-                console.log(book);
                 req.book = book;
 
                 next();
@@ -21,44 +19,60 @@ module.exports = {
     },
 
     // GET /books
-    showLatestBooks(req, res) {
-        res.render('books', {
-            id: 'books',
-            title: 'CodeLibrary',
-            books
-        });
+    showLatestBooks(req, res, next) {
+        Book.find()
+            .then(books => {
+                res.render('books', {
+                    id: 'books',
+                    title: 'CodeLibrary',
+                    books
+                });
+            })
+            .catch(next);
     },
 
     // GET /books/new
-    showNewBooks(req, res) {
-        res.render('books', {
-            id: 'books',
-            title: 'Новые книги',
-            books
-        });
+    showNewBooks(req, res, next) {
+        Book.find()
+            .sort({ date: -1 })
+            .limit(9)
+            .then(books => {
+                res.render('books', {
+                    id: 'books',
+                    title: 'Книги',
+                    books
+                });
+            })
+            .catch(next);
     },
 
     // GET /books/best
-    showBestBooks(req, res) {
-        res.render('books', {
-            id: 'books',
-            title: 'Лучшие книги',
-            books: books.sort((current, next) => next.likes - current.likes)
-        });
+    showBestBooks(req, res, next) {
+        Book.find()
+            .sort({ likes: -1 })
+            .limit(9)
+            .then(books => {
+                res.render('books', {
+                    id: 'books',
+                    title: 'Книги',
+                    books
+                });
+            })
+            .catch(next);
     },
 
     // GET /topics/:topic
-    showBooksByTopic(req, res) {
+    showBooksByTopic(req, res, next) {
         Topic.findById(req.params.topic)
-            .populate('book')
+            .populate('books')
             .then(topic => {
-                console.log(topic.books);
                 res.render('books', {
                     id: 'books',
-                    title: `Книги по ${req.topic.title}`,
+                    title: `Книги по ${topic.title}`,
                     books: topic.books
                 });
-            });
+            })
+            .catch(next);
     },
 
     // GET /books/:book

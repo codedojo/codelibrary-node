@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { user: User } = require('../models');
 
 module.exports = {
     // GET /auth/register
@@ -23,8 +23,8 @@ module.exports = {
     register(req, res, next) {
         let { email, password, confirmPassword } = req.body;
 
-        if (!email || !password) return next(new Error());
-        else if (password !== confirmPassword) return next (new Error());
+        if (!email || !password) return next(new Error('Необходимо ввести email и пароль'));
+        else if (password !== confirmPassword) return next (new Error('Пароли не совпадают'));
 
         User.create({ email, password })
             .then(user => {
@@ -37,9 +37,9 @@ module.exports = {
     // POST /auth/login
     login(req, res, next) {
         let { email, password } = req.body;
-
+        
         if (!email || !password) {
-            let error = new Error();
+            let error = new Error('Необходимо ввести логин и пароль');
             error.status = 401;
             return next(error);
         }
@@ -52,6 +52,7 @@ module.exports = {
             .catch(next);
     },
 
+    // GET /auth/logout
     logout(req, res, next) {
         if (req.session) {
             req.session.destroy(error => {

@@ -12,23 +12,23 @@ block main
 
                                 ul.mdc-list
                                     li.mdc-list-item
-                                        i.mdc-list-item__start-detail.material-icons person
+                                        i.mdc-list-item__graphic.material-icons person
                                         span.mdc-list-item__text= book.authors.join(', ')
 
                                     li.mdc-list-item
-                                        i.mdc-list-item__start-detail.material-icons business
-                                        span.mdc-list-item__text= book.publisher
+                                        i.mdc-list-item__graphic.material-icons business
+                                        span.mdc-list-item__text= book.publisher.title
 
                                     li.mdc-list-item
-                                        i.mdc-list-item__start-detail.material-icons edit
+                                        i.mdc-list-item__graphic.material-icons edit
                                         span.mdc-list-item__text #{book.edition}-е издание
 
                                     li.mdc-list-item
-                                        i.mdc-list-item__start-detail.material-icons date_range
+                                        i.mdc-list-item__graphic.material-icons date_range
                                         span.mdc-list-item__text= book.date
 
                                     li.mdc-list-item
-                                        i.mdc-list-item__start-detail.material-icons book
+                                        i.mdc-list-item__graphic.material-icons book
                                         span.mdc-list-item__text #{book.pages} стр.
 
                             section.mdc-card__media
