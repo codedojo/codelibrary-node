@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const config = require('../config');
+const { mongodbUri } = require('../config');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(config.mongodbUrl, { useMongoClient: true });
+mongoose.connect(mongodbUri.development);
 
-mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
+mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
 mongoose.connection.on('disconnected', () => console.log('Disconnected from MongoDB'));
 
@@ -17,4 +17,6 @@ process.on('SIGINT', () => {
     });
 });
 
-module.exports = mongoose.connection;
+module.exports = {
+    connection: mongoose.connection
+};

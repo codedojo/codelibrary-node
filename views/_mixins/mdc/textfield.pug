@@ -1,4 +1,4 @@
-mixin mdc-text-field(name, value)
+mixin mdc-text-field(name, label, value)
     div.mdc-text-field
-        input.mdc-text-field__input(name=name value=value)&attributes(attributes)
+        input.mdc-text-field__input(type=attributes.type || 'text' name=name placeholder=label)
         div.mdc-text-field__bottom-line

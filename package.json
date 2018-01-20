@@ -20,11 +20,12 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "material-components-web": "^0.28.0",
-    "mongodb": "^3.0.1",
-    "mongoose": "^4.13.9",
+    "mongoose": "^5.0.1",
     "morgan": "^1.9.0",
     "normalize.css": "^7.0.0",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5"
   }
 }
