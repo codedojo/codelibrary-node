@@ -2,10 +2,17 @@ const router = require('express').Router();
 
 const { auth: {
     showRegisterPage,
-    showLoginPage
+    showLoginPage,
+    register,
+    login
 } } = require('../controllers');
 
-router.get('/register', showRegisterPage);
-router.get('/login', showLoginPage);
+router.route('/register')
+    .get(showRegisterPage)
+    .post(register);
+
+router.route('/login')
+    .get(showLoginPage)
+    .post(login);
 
 module.exports = router;

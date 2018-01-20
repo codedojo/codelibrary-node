@@ -1,6 +1,9 @@
 const express = require('express');
 const logger = require('morgan');
 const favicon = require('serve-favicon');
+const session = require('express-session');
+
+require('./services/db');
 
 const config = require('./config');
 const { error } = require('./middleware');
@@ -18,6 +21,12 @@ app.use(express.static(config.paths.public));
 app.use('/lib', express.static(config.paths.lib));
 app.use(favicon(config.paths.favicon));
 app.use(logger('dev'));
+app.use(express.urlencoded({ extended: false }));
+app.use(session({
+    secret: config.sessionSecret,
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.use('/', routers.main);
 app.use('/auth', routers.auth);
