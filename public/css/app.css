@@ -396,6 +396,9 @@ template {
 body {
   background-color: rgba(0, 0, 0, 0.05); }
 
+.mdc-card {
+  background-color: white; }
+
 #content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,3 +431,13 @@ body {
       display: 100%;
       max-width: 200px;
       display: block; }
+
+#error-page #main {
+  max-width: 1024px;
+  margin: 2em auto;
+  text-align: center; }
+  #error-page #main .error-icon {
+    color: grey;
+    font-size: 5em; }
+  #error-page #main pre {
+    text-align: left; }

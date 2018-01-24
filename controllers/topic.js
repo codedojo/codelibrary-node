@@ -11,5 +11,15 @@ module.exports = {
                 next();
             })
             .catch(next);
+    },
+
+    findTopic(req, res, next, id) {
+        Topic.findById(id)
+            .then(topic => {
+                topic.req = topic;
+
+                next();
+            })
+            .catch(next);
     }
 };

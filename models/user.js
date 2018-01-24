@@ -11,7 +11,9 @@ const User = new mongoose.Schema({
         maxlength: [256, 'Адрес электронный почты слишком длинный.'],
         match: [/^[a-zA-Z0-9'._%+-]+@[a-zA-Z0-9-][a-zA-Z0-9.-]*\.[a-zA-Z]{2,63}$/, 'Неверный формат адреса электронной почты.']
     },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    username: String,
+    photo: String
 }, {
     timestamps: true
 });
@@ -34,6 +36,10 @@ User.post('save', function(error, user, next) {
         next(error);
     }
 });
+
+User.methods.isCorrectPassword = function(password) {
+    return bcrypt.compare(password, this.password);
+};
 
 User.statics.authenticate = function(email, password) {
     return this.findOne({ email })

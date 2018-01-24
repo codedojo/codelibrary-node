@@ -1,4 +1,4 @@
-const { user: User } = require('../models');
+const { passport } = require('../services');
 
 module.exports = {
     // GET /auth/register
@@ -20,37 +20,16 @@ module.exports = {
     },
 
     // POST /auth/register
-    register(req, res, next) {
-        let { email, password, confirmPassword } = req.body;
-
-        if (!email || !password) return next(new Error('Необходимо ввести email и пароль'));
-        else if (password !== confirmPassword) return next (new Error('Пароли не совпадают'));
-
-        User.create({ email, password })
-            .then(user => {
-                req.session.userId = user.id;
-                res.redirect('/profile');
-            })
-            .catch(next);
-    },
+    register: passport.authenticate('local-register', {
+        failureRedirect: '/auth/register',
+        successRedirect: '/profile'
+    }),
 
     // POST /auth/login
-    login(req, res, next) {
-        let { email, password } = req.body;
-        
-        if (!email || !password) {
-            let error = new Error('Необходимо ввести логин и пароль');
-            error.status = 401;
-            return next(error);
-        }
-
-        User.authenticate(email, password)
-            .then(user => {
-                req.session.userId = user.id;
-                res.redirect('/profile');
-            })
-            .catch(next);
-    },
+    login: passport.authenticate('local-login', {
+        failureRedirect: '/auth/login',
+        successRedirect: '/profile'
+    }),
 
     // GET /auth/logout
     logout(req, res, next) {

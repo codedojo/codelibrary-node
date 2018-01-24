@@ -1,18 +1,24 @@
 const router = require('express').Router();
 
 const { auth: { authenticated, unauthenticated } } = require('../middleware');
-const { auth: controller } = require('../controllers');
+const {
+    auth: authController,
+    oauth: oauthController
+} = require('../controllers');
 
 router.route('/register')
     .all(unauthenticated)
-    .get(controller.showRegisterPage)
-    .post(controller.register);
+    .get(authController.showRegisterPage)
+    .post(authController.register);
 
 router.route('/login')
     .all(unauthenticated)
-    .get(controller.showLoginPage)
-    .post(controller.login);
+    .get(authController.showLoginPage)
+    .post(authController.login);
 
-router.get('/logout', authenticated, controller.logout);
+router.get('/github', oauthController.github.authenticate);
+router.get('/github/callback', oauthController.github.callback);
+
+router.get('/logout', authenticated, authController.logout);
 
 module.exports = router;
