@@ -1,6 +1,16 @@
-const { topic: Topic } = require('../../models');
+const { Topic } = require('../../shared/models');
 
 module.exports = {
+    findTopics(req, res, next) {
+        Topic.find()
+            .then(topics => {
+                req.topics = topics;
+
+                next();
+            })
+            .catch(next);
+    },
+
     findTopic(req, res, next, id) {
         Topic.findById(id)
             .then(topic => {

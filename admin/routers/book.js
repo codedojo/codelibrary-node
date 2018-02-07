@@ -1,21 +1,30 @@
 const router = require('express').Router();
 
-const { book: controller } = require('../controllers');
+const {
+    book: bookController,
+    topic: topicController
+} = require('../controllers');
 
-router.param('book', controller.findBook);
+router.param('book', bookController.findBook);
 
-router.get('/', controller.showIndexPage);
+router.get('/', bookController.showIndexPage);
 
 router.route('/create')
-    .get(controller.showCreatePage)
-    .post(controller.createBook);
+    .get(
+        topicController.findTopics,
+        bookController.showCreatePage
+    )
+    .post(bookController.createBook);
 
 router.route('/:book/update')
-    .get(controller.showUpdatePage)
-    .post(controller.updateBook);
+    .get(
+        topicController.findTopics,
+        bookController.showUpdatePage
+    )
+    .post(bookController.updateBook);
 
 router.route('/:book/delete')
-    .get(controller.showDeletePage)
-    .post(controller.deleteBook);
+    .get(bookController.showDeletePage)
+    .post(bookController.deleteBook);
 
 module.exports = router;

@@ -1,21 +1,21 @@
 const router = require('express').Router();
 
-const { topic: controller } = require('../controllers');
+const { topic: topicController } = require('../controllers');
 
-router.param('topic', controller.findTopic);
+router.param('topic', topicController.findTopic);
 
-router.get('/', controller.showIndexPage);
+router.get('/', topicController.showIndexPage);
 
 router.route('/create')
-    .get(controller.showCreatePage)
-    .post(controller.createTopic);
+    .get(topicController.showCreatePage)
+    .post(topicController.createTopic);
 
 router.route('/:topic/update')
-    .get(controller.showUpdatePage)
-    .post(controller.updateTopic);
+    .get(topicController.showUpdatePage)
+    .post(topicController.updateTopic);
 
 router.route('/:topic/delete')
-    .get(controller.showDeletePage)
-    .post(controller.deleteTopic);
+    .get(topicController.showDeletePage)
+    .post(topicController.deleteTopic);
 
 module.exports = router;

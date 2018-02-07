@@ -1,7 +1,7 @@
 extends ../_layout
 
 block main
-    form(method='post')
+    +form(method='post')
         p Вы уверены что хотите удалить тему "#{topic.title}"
         +mdc-button('Нет')(href='/admin/topics')
         +mdc-button('Да')(type='submit')

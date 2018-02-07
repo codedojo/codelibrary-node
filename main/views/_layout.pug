@@ -1,0 +1,13 @@
+extends /_layout
+
+include /_mixins/mdc/index
+
+block header
+    include _includes/toolbar
+
+block content
+    section#content
+        block sidenav
+            include _includes/sidenav
+
+        block main

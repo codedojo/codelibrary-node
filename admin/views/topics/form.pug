@@ -1,11 +1,10 @@
 extends ../_layout
 
 block main
-    form(method='post')
-        input(type='hidden' name='secret_string' value='qwerty')
+    +form(method='post')
         if !topic._id
-            +mdc-text-field('id', topic._id)(placeholder='ID' required)
-        +mdc-text-field('title', topic.title)(placeholder='Название' required)
+            +mdc-text-field('id', 'ID', topic._id)(required)
+        +mdc-text-field('title', 'Название', topic.title)(required)
 
         +mdc-button(topic._id ? 'Сохранить' : 'Создать')(type='submit' raised)
         if topic._id

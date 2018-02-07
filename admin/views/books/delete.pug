@@ -1,0 +1,7 @@
+extends ../_layout
+
+block main
+    +form(method='post')
+        p Вы уверены что хотите удалить книгу "#{book.title}"
+        +mdc-button('Нет')(href='/admin/books')
+        +mdc-button('Да')(type='submit')

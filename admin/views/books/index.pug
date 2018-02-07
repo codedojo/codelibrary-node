@@ -1,1 +1,14 @@
 extends ../_layout
+
+block main
+    ul.mdc-list
+        for book in books
+            li.mdc-list-item
+                = book.title
+                a.mdc-list-item__meta.material-icons(href=`/admin/books/${book.id}/update`) edit
+                a.mdc-list-item__meta.material-icons(href=`/admin/books/${book.id}/delete`) delete
+        else
+            p Нет книг
+
+    a(href='/admin/books/create').mdc-fab
+        i.mdc-fab__icon.material-icons add

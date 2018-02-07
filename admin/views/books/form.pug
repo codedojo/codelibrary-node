@@ -1,0 +1,41 @@
+extends ../_layout
+
+block main
+    +form(method='post')
+        +mdc-text-field('title', 'Название', book.title)(required)
+        +mdc-text-field('slug', 'Слаг', book.slug)(required)
+        +mdc-text-field('authors', 'Авторы', book.authors.join(', '))(required)
+
+        select(name='publishers')
+            option(value='orielly') O'Reilly
+            option(value='manning') Manning
+            option(value='microsoft') Microsoft Press
+
+        +mdc-text-field('date', 'Дата', book.date.format('YYYY-MM-DD'))(type='date')
+        +mdc-text-field('edition', 'Издание', book.edition)(type='number')
+        +mdc-text-field('pages', 'Страницы', book.pages)(type='number')
+        
+        select(name='language')
+            for language in LANGUAGES
+                option(value=language.value selected=(book.language === language.value))= language.title
+
+        select(name='level')
+            option(value='beg' selected=(book.level === 'beg')) Легкий
+            option(value='int' selected=(book.level === 'int')) Средний
+            option(value='adv' selected=(book.level === 'adv')) Сложный
+
+        select(name='topics' multiple)
+            for topic in topics
+                option(value=topic.id selected=(book.topics.includes(topic.id)))= topic.title
+
+        +mdc-text-field('tags', 'Теги', book.tags.join(', '))
+
+        +mdc-text-field('url', 'Ссылка', book.url)
+        +mdc-text-field('imageUrl', 'Ссылка', book.imageUrl)
+
+        textarea(name='description' placeholder='Описание')= book.description
+        textarea(name='contents' placeholder='Описание')= book.contents
+
+        +mdc-button(book._id ? 'Сохранить' : 'Создать')(type='submit' raised)
+        if book._id
+            +mdc-button('Удалить')(href=`/admin/books/${book._id}/delete`)

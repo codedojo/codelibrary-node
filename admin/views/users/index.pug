@@ -1,0 +1,11 @@
+extends ../_layout
+
+block main
+    ul.mdc-list.mdc-list--avatar-list
+        for user in users
+            li.mdc-list-item
+                img.mdc-list-item__graphic(src=user.image)
+                = user.title
+                a.mdc-list-item__meta.material-icons(href=`/admin/users/${user._id}/delete`) delete
+        else
+            p Нет топиков
