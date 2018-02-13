@@ -1,3 +1,5 @@
 module.exports = {
-    error: require('./error')
+    cart: require('./cart'),
+    error: require('./error'),
+    flash: require('./flash')
 };

@@ -1,8 +1,8 @@
 module.exports = {
     auth: require('./auth'),
     book: require('./book'),
+    cart: require('./cart'),
     main: require('./main'),
-    search: require('./search'),
     topic: require('./topic'),
     user: require('./user')
 };

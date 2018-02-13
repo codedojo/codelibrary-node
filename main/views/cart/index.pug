@@ -1,0 +1,11 @@
+extends ../_layout
+
+block content
+    section#content
+        ul
+            for item in cart.items
+                li
+                    span= item.title
+                    | 
+                    a(href=`/cart/remove?productId=${item.id}`) Удалить
+            li Итого #{cart.calculateTotal()} руб.

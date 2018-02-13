@@ -49,6 +49,8 @@ server.use(session({
 
 server.use(services.passport.initialize());
 server.use(services.passport.session());
+server.use(middleware.flash());
+server.use(middleware.cart);
 
 server.use('/', main);
 server.use('/admin', admin);
