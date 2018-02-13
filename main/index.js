@@ -24,6 +24,6 @@ main.use('/auth', routers.auth);
 main.use('/user', middleware.auth.allowAuthenticated, routers.user);
 main.use('/books', routers.book);
 main.use('/topics', routers.topic);
-main.use('/search', routers.search);
+main.use('/cart', routers.cart);
 
 module.exports = main;

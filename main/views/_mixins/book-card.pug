@@ -14,5 +14,9 @@ mixin book-card(book)
             button.mdc-button.mdc-button--compact.mdc-card__action
                 i.mdc-button__icon.material-icons thumb_up
                 span= book.likes
+            form(method='post' action='/cart')
+                input(type='hidden' name='productId' value=book.id)
+                button(type='submit').mdc-button.mdc-button--compact.mdc-card__action
+                    i.mdc-button__icon.material-icons shopping_basket
 
             a.mdc-button.mdc-button--compact.mdc-card__action(href=`/books/${book.slug}`) Подробнее

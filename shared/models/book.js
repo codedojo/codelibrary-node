@@ -20,6 +20,7 @@ const Book = new Schema({
     likes: { type: Number, default: 0 },
     url: String,
     imageUrl: String,
+    price: { type: Number, default: 1000 },
     codeUrl: String,
     githubUrl: String,
     description: { type: String, default: '', trim: true },

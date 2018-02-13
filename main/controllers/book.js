@@ -75,6 +75,32 @@ module.exports = {
             .catch(next);
     },
 
+    // GET /books/search?query=value
+    showResults(req, res, next) {
+        let regex = new RegExp(req.query.query, 'gi');
+        let { skip = 0, limit = 0 } = req.query;
+        
+        Book.find({
+            $or: [
+                { title: regex },
+                { authors: regex },
+                { topics: regex },
+                { tags: regex }
+            ]
+        })
+            .skip(Number(skip))
+            .limit(Number(limit))
+            .then(books => {
+                res.render('books', {
+                    id: 'book-search',
+                    title: `Результаты поиска по запрос: ${req.query.query}`,
+                    query: req.query.query,
+                    books
+                });
+            })
+            .catch(next);
+    },
+
     // GET /books/:book
     showBook(req, res) {
         res.render('books/book', {
