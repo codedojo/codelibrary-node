@@ -21,6 +21,7 @@
   "dependencies": {
     "apicache": "^1.2.0",
     "bcrypt": "^1.0.3",
+    "chai": "^4.1.2",
     "connect-mongo": "^2.0.1",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
@@ -29,6 +30,7 @@
     "express-session": "^1.15.6",
     "jwt-simple": "^0.5.1",
     "material-components-web": "^0.28.0",
+    "mocha": "^5.0.0",
     "moment": "^2.20.1",
     "mongoose": "^5.0.1",
     "morgan": "^1.9.0",
@@ -38,6 +40,8 @@
     "passport-jwt": "^3.0.1",
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-rc.4",
-    "serve-favicon": "^2.4.5"
+    "serve-favicon": "^2.4.5",
+    "sinon": "^4.2.2",
+    "supertest": "^3.0.0"
   }
 }
