@@ -1,6 +1,8 @@
+const mongoose = require('mongoose');
 const router = require('express').Router();
 
-const { book: bookController } = require('../controllers');
+const Book = mongoose.model('Book');
+const bookController = require('../controllers').book(Book);
 
 router.param('id', bookController.book.find);
 
