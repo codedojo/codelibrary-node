@@ -1,25 +1,23 @@
-const { Book } = require('../../shared/models');
-
-module.exports = {
+module.exports = Book => ({
     books: {
         // GET /api/books
         get(req, res, next) {
-            Book.find()
+            return Book.find()
                 .then(books => res.status(200).json(books))
                 .catch(next);
         },
 
         // POST /api/books
         post(req, res, next) {
-            Book.create(req.body)
+            return Book.create(req.body)
                 .then(book => res.status(201).json(book))
                 .catch(next);
         }
     },
 
     book: {
-        find(req, res, next, id) {
-            Book.findById(id)
+        find(req, res, next, slug) {
+            Book.findOne({ slug })
                 .then(book => {
                     if (!book) return res.sendStatus(404);
                     req.book = book;
@@ -59,4 +57,4 @@ module.exports = {
             }
         }
     }
-};
+});
