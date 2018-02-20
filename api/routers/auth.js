@@ -1,13 +1,14 @@
+const mongoose = require('mongoose');
 const router = require('express').Router();
 const jwt = require('jwt-simple');
 
 const { jwtSecret } = require('../../shared/config');
-const { User } = require('../../shared/models');
+const User = mongoose.model('User');
 
 router.post('/token', (req, res, next) => {
     if (!req.body.email || !req.body.password) return res.sendStatus(401);
 
-    User.findOne({ email: req.body.email })
+    User.findOne({ email: req.body.email, blocked: false })
         .then(user => {
             if (!user) return res.sendStatus(401);
             if (!user.isCorrectPassword(req.body.password)) return res.sendStatus(201);
