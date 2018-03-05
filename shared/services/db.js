@@ -4,7 +4,7 @@ const { mongodbUri } = require('../config');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(mongodbUri.local);
+mongoose.connect(mongodbUri);
 
 mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 mongoose.connection.once('open', () => console.log('Connected to MongoDB'));

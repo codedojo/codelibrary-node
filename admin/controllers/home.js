@@ -1,5 +1,7 @@
 module.exports = {
     showIndexPage(req, res) {
-        res.render('index');
+        res.render('index', {
+            id: 'admin'
+        });
     }
 };

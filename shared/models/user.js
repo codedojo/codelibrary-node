@@ -13,10 +13,16 @@ const User = new mongoose.Schema({
     },
     password: { type: String, required: true },
     username: { type: String, unique: true, sparse: true },
-    photo: String,
+    firstname: { type: String },
+    lastname: { type: String },
+    photo: { type: String },
     role: { type: String, default: 'user', enum: ['user', 'admin'] }
 }, {
     timestamps: true
+});
+
+User.virtual('displayName').get(function() {
+    return `${this.firstname} ${this.lastname}`;
 });
 
 User.virtual('isAdmin').get(function() {

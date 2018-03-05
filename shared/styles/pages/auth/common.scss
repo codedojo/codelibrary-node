@@ -1,8 +1,13 @@
 .auth-page {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    background-image: url('../img/bg.jpg');
+    
+    #main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
 
     .auth-form {
         width: 100%;

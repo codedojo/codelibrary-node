@@ -3,18 +3,19 @@ extends ../_layout
 block header
 
 block content
-    form(id='register-form' class='auth-form' method='POST' action='/auth/register').mdc-card
-        header.mdc-card__primary
-            h1.mdc-card__title.mdc-card__title--large= title
+    main#main
+        form(id='register-form' class='auth-form' method='POST' action='/auth/register').mdc-card
+            header.mdc-card__primary
+                h1.mdc-card__title.mdc-card__title--large= title
 
-        section.mdc-card__supporting-text
-            div.mdc-text-field
-                input.mdc-text-field__input(type='email' name='email' placeholder='Электронная почта' required)
-            div.mdc-text-field
-                input.mdc-text-field__input(type='password' name='password' placeholder='Пароль' required)
-            div.mdc-text-field
-                input.mdc-text-field__input(type='password' name='confirmPassword' placeholder='Подтвердите пароль' required)
+            section.mdc-card__supporting-text
+                div.mdc-text-field
+                    input.mdc-text-field__input(type='email' name='email' placeholder='Электронная почта' required)
+                div.mdc-text-field
+                    input.mdc-text-field__input(type='password' name='password' placeholder='Пароль' required)
+                div.mdc-text-field
+                    input.mdc-text-field__input(type='password' name='confirmPassword' placeholder='Подтвердите пароль' required)
 
-        footer.mdc-card__actions
-            button.mdc-button.mdc-card__action.mdc-button--raised.mdc-button--dense(type='submit') Зарегистрироваться
-            a.mdc-button.mdc-card__action.mdc-button--dense(href='/auth/login') Войти
+            footer.mdc-card__actions
+                button.mdc-button.mdc-card__action.mdc-button--raised.mdc-button--dense(type='submit') Зарегистрироваться
+                a.mdc-button.mdc-card__action.mdc-button--dense(href='/auth/login') Войти

@@ -1,0 +1,32 @@
+#main-page {
+    background-image: url('../img/bg.jpg');
+
+    .mdc-toolbar {
+        background-color: transparent;
+    }
+
+    #main {
+        color: white;
+        text-align: center;
+        margin-top: 128px;
+
+        i {
+            font-size: 72px;
+        }
+
+        h1 {
+            font-size: 64px;
+            margin: .25em;
+        }
+
+        p {
+            font-size: 36px;
+            margin: .25em 0 1em;
+        }
+        
+        a {
+            display: inline-block;
+            margin: .5em;
+        }
+    }
+}

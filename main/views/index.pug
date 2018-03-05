@@ -1,4 +1,13 @@
 extends _layout
 
+block header
+
 block content
-    h1 Главная страница
+    main#main
+        i.material-icons book
+        h1 CodeLibrary
+        p Библиотека разработчика
+
+        a.mdc-button.mdc-button--raised(href='/auth/login') Войти
+        | или
+        a.mdc-button.mdc-button--raised(href='/auth/register') Зарегистрироваться

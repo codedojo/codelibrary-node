@@ -3,17 +3,18 @@ extends ../_layout
 block header
 
 block content
-    form(id='login-form' class='auth-form' method='POST' action='/auth/login').mdc-card
-        header.mdc-card__primary
-            h1.mdc-card__title.mdc-card__title--large= title
+    main#main
+        form(id='login-form' class='auth-form' method='POST' action='/auth/login').mdc-card
+            header.mdc-card__primary
+                h1.mdc-card__title.mdc-card__title--large= title
 
-        section.mdc-card__supporting-text
-            div.mdc-text-field
-                input.mdc-text-field__input(type='email' name='email' placeholder='Электронная почта' required)
-            div.mdc-text-field
-                input.mdc-text-field__input(type='password' name='password' placeholder='Пароль' required)
+            section.mdc-card__supporting-text
+                div.mdc-text-field
+                    input.mdc-text-field__input(type='email' name='email' placeholder='Электронная почта' required)
+                div.mdc-text-field
+                    input.mdc-text-field__input(type='password' name='password' placeholder='Пароль' required)
 
-        footer.mdc-card__actions
-            button.mdc-button.mdc-card__action.mdc-button--raised.mdc-button--dense(type='submit') Войти
-            a.mdc-button.mdc-card__action.mdc-button--dense(href='/auth/github') GitHub
-            a.mdc-button.mdc-card__action.mdc-button--dense(href='/auth/register') Зарегистрироваться
+            footer.mdc-card__actions
+                button.mdc-button.mdc-card__action.mdc-button--raised.mdc-button--dense(type='submit') Войти
+                a.mdc-button.mdc-card__action.mdc-button--dense(href='/auth/github') GitHub
+                a.mdc-button.mdc-card__action.mdc-button--dense(href='/auth/register') Зарегистрироваться

@@ -1,0 +1,8 @@
+extends ../_layout
+
+block content
+    main#main
+        if user.photo
+            img.user-photo(src=user.photo)
+        h1.user-name= user.displayName
+        p.user-email= user.email

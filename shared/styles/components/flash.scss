@@ -1,0 +1,9 @@
+.flash {
+    padding: 16px;
+    text-align: center;
+
+    &.flash--error {
+        background-color: tomato;
+        color: white;
+    }
+}

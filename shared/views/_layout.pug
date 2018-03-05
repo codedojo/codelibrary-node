@@ -17,10 +17,11 @@ html(lang='ru')
 
         block head
     body(id=`${id}-page` class=className).mdc-typography
+        if errors
+            for error in errors
+                div.flash.flash--error= error
+
         block header
-        
-        if flash
-            div#flash(class=`flash-${flash.level}`)= flash.message
             
         block content
 
