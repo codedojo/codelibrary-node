@@ -4,10 +4,11 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "pm2 start index.js -i max",
     "dev": "nodemon -r dotenv/config index.js",
     "sass": "gulp watch:sass",
-    "lint": "eslint"
+    "lint": "eslint",
+    "stop": "pm2 stop all"
   },
   "devDependencies": {
     "eslint": "^4.13.1",
@@ -21,22 +22,27 @@
   "dependencies": {
     "apicache": "^1.2.0",
     "bcrypt": "^1.0.3",
+    "connect-flash": "^0.1.1",
     "connect-mongo": "^2.0.1",
     "cors": "^2.8.4",
+    "csurf": "^1.9.0",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-rate-limit": "^2.11.0",
     "express-session": "^1.15.6",
+    "helmet": "^3.11.0",
     "jwt-simple": "^0.5.1",
     "material-components-web": "^0.28.0",
     "moment": "^2.20.1",
     "mongoose": "^5.0.1",
     "morgan": "^1.9.0",
+    "ms": "^2.1.1",
     "normalize.css": "^7.0.0",
     "passport": "^0.4.0",
     "passport-github": "^1.1.0",
     "passport-jwt": "^3.0.1",
     "passport-local": "^1.0.0",
+    "pm2": "^2.10.1",
     "pug": "^2.0.0-rc.4",
     "serve-favicon": "^2.4.5"
   }

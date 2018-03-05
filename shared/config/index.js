@@ -1,17 +1,15 @@
 const path = require('path');
 
+const env = process.env.NODE_ENV;
 const ROOT_PATH = path.resolve(__dirname, '..', '..');
 
 module.exports = {
     version: process.env.APP_VERSION,
-    env: process.env.NODE_ENV,
-    port: process.env.PORT || 3000,
+    env,
+    port: process.env.PORT || 3001,
     sessionSecret: 'HacJmB3ma6crKKtK',
     jwtSecret: '8UG^LmgL!!N#42vq',
-    mongodbUri: {
-        local: 'mongodb://localhost:27017/codedojo',
-        mlab: process.env.MONGODB_MLAB_URL
-    },
+    mongodbUri: env === 'development' ? 'mongodb://localhost:27017/codedojo' : process.env.MONGODB_URL,
     paths: {
         views: path.join(ROOT_PATH, 'shared', 'views'),
         public: path.join(ROOT_PATH, 'shared', 'public'),

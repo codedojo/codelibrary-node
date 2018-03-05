@@ -5,6 +5,8 @@ block header
 block content
     main#main
         form(id='login-form' class='auth-form' method='POST' action='/auth/login').mdc-card
+            input(type='hidden' name='_csrf' value=csrfToken)
+            
             header.mdc-card__primary
                 h1.mdc-card__title.mdc-card__title--large= title
 
